@@ -1,0 +1,39 @@
+var room = "dining room";
+var suspect = "Mr. Parkes";
+var weapon = "";
+var solved = false;
+
+if ((room = "gallery")  && (suspect = "Ms. Van Cleve")) {
+        weapon = "trophy";
+        solved=true;
+    
+} else if ((room = "dining room") && (suspect = "Mr. Parkes")) {
+        weapon = "knife";
+        solved =true;
+        
+} else if ((room = "billiards room") && (suspect = "Mrs. Sparr")) {
+        weapon = "pool stick";
+        solved =true;    
+} else {
+        room = "ballroom";
+        suspect = "Mr. Kalehoff";
+        weapon = "poison";
+        solved =true;
+}
+
+if (solved) {
+	console.log(suspect + " did it in the " + room  + " with the " + weapon +"!");
+}
+ Wrap  • May 23rd at 6:35 AM • 694 B JavaScript/JSON snippet • Shared in #fe-group-3 
+Unshare from #fe-group-3
+Femi Reis May 23rd at 6:35 AM  
+
+My code simply runs the first condition as true and prints the solved statement. It doesn't seem to test my variables, hence whatever I change it to, it simply prints the first condition as true. Any suggestions on this? Thanks guys!
+Anoma May 23rd at 10:51 AM  
+
+You are using assignment operator in your if statements instead of comparism
+Ibo May 24th at 6:40 AM  
+
+@Femi Reis just as @Anoma says, use the comparison operator (===) instead of (=).  for example    if ((room === "gallery")  && (suspect === "Ms. Van Cleve")) {
+       weapon = "trophy";
+       solved=true;
